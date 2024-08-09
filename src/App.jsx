@@ -1,15 +1,17 @@
-import { useState } from 'react'
+import { createContext, useState } from 'react'
 import './App.css'
 import Card1 from './Card1'
+export const UserContext = createContext();
 
 function App() {
 
   const [state, setState] = useState(" ")
 
   return (
-    <>
-    <Card1 state={state} setState={setState}/>
-    </>
+  <UserContext.Provider value={[state, setState]}>
+    <Card1/>
+  </UserContext.Provider>
+
   )
 }
 

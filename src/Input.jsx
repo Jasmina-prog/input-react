@@ -1,10 +1,14 @@
+import { useContext } from "react"
 import "./Input.scss"
-
-function Input(props){
+import { UserContext } from "./App"
+function Input(){
+    const user = useContext(UserContext)
+    const [inputValue, setInputValue] = user
     return(
         <>
         <input type="text" onChange={(e)=>{
-            props.setState(e.target.value)
+            setInputValue(e.target.value)
+            console.log(e.target.value);
         }}/>
         </>
     )

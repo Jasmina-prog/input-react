@@ -3,13 +3,11 @@ import "./Card1.scss"
 import Card2 from "./Card2"
 import Input from "./Input"
 
-function Card1(props){
-
-    
+function Card1(){
     return(
         <div className="card1">
-        <Input setState={props.setState}/>
-        <Card2 state={props.state} setState={props.setState}/>
+        <Input />
+        <Card2 />
         </div>
     )
 }

@@ -1,12 +1,14 @@
+
 import "./Card2.scss"
 import Input from "./Input"
 import Monitor from "./Monitor"
 
-function Card2(props){
+function Card2(){
+
     return(
         <div className="card2">
-            <Input setState={props.setState}/>
-            <Monitor state={props.state} setState={props.setState}/>
+            <Input/>
+            <Monitor/>
         </div>
     )
 }
